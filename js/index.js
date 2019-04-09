@@ -2,7 +2,7 @@ const btn = document.querySelectorAll('.btn');
 const intro = document.querySelector('.intro');
 const midSec = document.querySelectorAll('.content-section');
 const page = document.querySelector('html');
-
+const para = document.querySelectorAll('.content-section .text-content');
 
 
 window.addEventListener('load', (event) => {
@@ -26,6 +26,11 @@ btn[1].addEventListener('mouseout', (event) => {
 })
 
 midSec[0].addEventListener('dblclick', (event) => {
+    midSec[0].style.backgroundColor = 'green';
+})
+
+para[0].addEventListener('dblclick', (event) => {
+    event.stopPropagation();
     midSec[0].style.fontFamily = 'cursive';
 })
 
@@ -33,9 +38,11 @@ document.addEventListener('keydown', (event) => {
     page.style.backgroundColor = 'black';
     page.style.color = 'white';
 });
+
 window.addEventListener('resize', (event) => {
     alert(`You found another!`);
 })
 
-
-
+window.addEventListener('scroll', (event) => {
+    page.style.backgroundColor = 'yellow';
+})
