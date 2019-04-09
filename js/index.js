@@ -17,13 +17,25 @@ btn[0].addEventListener('click', (event) => {
     btn[0].style.backgroundColor = 'black';
 })
 
-btn[1].addEventListener('load', (event) => {
-    btn[1].style.textSize = '3rem';
+btn[1].addEventListener('mouseover', (event) => {
+    btn[1].style.fontSize = '3rem';
 })
 
-midSec[0].addEventListener('')
+btn[1].addEventListener('mouseout', (event) => {
+    btn[1].style.fontSize = '1rem';
+})
+
+midSec[0].addEventListener('dblclick', (event) => {
+    midSec[0].style.fontFamily = 'cursive';
+})
+
+document.addEventListener('keydown', (event) => {
+    page.style.backgroundColor = 'black';
+    page.style.color = 'white';
+});
+window.addEventListener('resize', (event) => {
+    alert(`You found another!`);
+})
 
 
-
-console.log(page);
 
